@@ -1,5 +1,2 @@
 dash
-pandas
-plotly
-openpyxl
 gunicorn
