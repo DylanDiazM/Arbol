@@ -237,4 +237,10 @@ def update_graph(selected_fecha, selected_codigos, selected_año, selected_mes):
 
     return fig
 
+import os
+
+if __name__ == "__main__":
+    # Render provides the port via the PORT environment variable
+    port = int(os.environ.get("PORT", 8050))  # Default to 8050 if not specified
+    app.run_server(debug=False, host="0.0.0.0", port=port)
 
