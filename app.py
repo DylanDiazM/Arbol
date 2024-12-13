@@ -1,15 +1,10 @@
-from dash import Dash, html
+from flask import Flask
 
-# Define the Dash application
-app = Dash(__name__)
+app = Flask(__name__)
 
-# Set the layout
-app.layout = html.Div([
-    html.H1("Hello, Render!")
-])
+@app.route('/')
+def home():
+    return "¡Hola, mundo! Esta es una aplicación web en Render."
 
-# Ensure compatibility with Render's environment
-if __name__ == "__main__":
-    import os
-    port = int(os.environ.get("PORT", 8050))  # Render uses the PORT environment variable
-    app.run_server(debug=False, host="0.0.0.0", port=port)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=8080)
