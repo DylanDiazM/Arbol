@@ -7,7 +7,7 @@ from dash.dependencies import Input, Output
 # Create a Dash app
 app = dash.Dash(__name__)
 
-file_path = 'arbol_4.xlsx'
+file_path = 'arbol_5.xlsx'
 data = pd.read_excel(file_path)
 
 def safe_int(value):
